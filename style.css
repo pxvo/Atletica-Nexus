@@ -1,0 +1,285 @@
+/* Definição da paleta de cores */
+:root {
+    --verde: #76CA39;
+    --branco: #FFFFFF;
+    --preto: #000000;
+    --verdeE: #209200;
+}
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--branco);
+    color: var(--preto);
+    line-height: 1.6;
+}
+
+/* Estilização do cabeçalho */
+header {
+    background: linear-gradient(to left, var(--verdeE), var(--verde));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    transition: background 0.3s ease;
+}
+
+header:hover {
+    background: linear-gradient(to right, var(--verdeE), var(--verde));
+}
+
+header .header-content {
+    display: flex;
+    align-items: center;
+}
+
+header .header-content img.logo {
+    width: 60px;
+    height: auto;
+    margin-right: 10px;
+}
+
+header .header-content h1 {
+    color: var(--branco);
+    font-size: 20px;
+    margin: 0;
+}
+
+header .header-info {
+    display: flex;
+    align-items: center;
+}
+
+header .header-info a {
+    color: var(--branco);
+    margin-left: 10px;
+    white-space: nowrap;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header .header-info a:hover {
+    color: var(--preto);
+}
+
+header .header-info span {
+    color: var(--branco);
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+header .header-info i {
+    margin-right: 5px;
+}
+
+/* Estilização da navegação */
+nav {
+    background-color: var(--preto);
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--verde);
+}
+
+/* Estilização das seções */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section h2 {
+    color: var(--verdeE);
+    margin-bottom: 15px;
+}
+
+/* Estilização da Descrição */
+.descricao p {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 16px;
+    padding: 20px;
+}
+
+/* Estilização da Diretoria */
+.diretoria .integrantes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    justify-content: center;
+}
+
+.diretoria .integrante {
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.diretoria .integrante:hover {
+    transform: scale(1.05);
+}
+
+.diretoria .integrante img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 5px;
+}
+
+.diretoria .integrante h3 {
+    font-size: 14px;
+    margin-bottom: 3px;
+    transition: color 0.3s ease;
+}
+
+.diretoria .integrante p {
+    font-size: 12px;
+    font-style: italic;
+    transition: color 0.3s ease;
+}
+
+.diretoria .integrante:hover h3,
+.diretoria .integrante:hover p {
+    color: var(--verde);
+}
+
+/* Estilização da Galeria */
+.galeria .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.galeria .grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+}
+
+/* Estilização dos Produtos */
+.produtos .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.produtos .produto {
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.produtos .produto:hover {
+    transform: scale(1.05);
+}
+
+.produtos .produto img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Estilização da Associação */
+.associacao .planos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+.associacao .plano {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.associacao .plano:hover {
+    transform: translateY(-5px);
+}
+
+.associacao .plano h3 {
+    color: var(--verdeE);
+    margin-bottom: 20px;
+}
+
+.associacao .beneficios {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.associacao .beneficios p {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.associacao .beneficios i {
+    color: var(--verde);
+    margin-right: 10px;
+}
+
+.associacao .preco {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.associacao .adquirir {
+    background-color: var(--verde);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.associacao .adquirir:hover {
+    background-color: var(--verdeE);
+}
+
+/* Botão Flutuante do WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+.whatsapp-button img {
+    width: 100%;
+    height: auto;
+}
