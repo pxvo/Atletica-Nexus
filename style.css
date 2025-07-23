@@ -30,10 +30,6 @@ header {
     transition: background 0.3s ease;
 }
 
-header:hover {
-    background: linear-gradient(to right, var(--verdeE), var(--verde));
-}
-
 header .header-content {
     display: flex;
     align-items: center;
